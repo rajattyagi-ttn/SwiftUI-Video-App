@@ -10,34 +10,43 @@ import SwiftUI
 
 struct VideosRow: View {
     @State var vids: [Video] = []
+    
+    @State var isLoading = true
+    
     var categoryName: String
-
     
     var body: some View {
         GeometryReader { metrics in
 
             VStack(alignment: .leading) {
+                
                 Text(self.categoryName)
                 .font(.title)
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(alignment: .top) {
-                        ForEach(self.vids) { vid in
-                            NavigationLink(destination: VideoDetailedView(vidItem: vid, vidPlayer: player(url: vid.source))) {
-                                VideoItem(vid: vid)
-                                    .frame(width: metrics.size.width * 0.8)
-                                    .padding(.trailing, 30)
+                
+                if self.isLoading {
+                    Loader()
+                } else {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(alignment: .top) {
+                            ForEach(self.vids) { vid in
+                                NavigationLink(destination: VideoDetailedView(vidItem: vid, vidPlayer: player(url: vid.source))) {
+                                    VideoItem(vid: vid)
+                                        .frame(width: metrics.size.width * 0.5)
+                                        .padding(.trailing, 30)
+                                }
                             }
-                        }.onAppear {
-
-                        }
-                    }.frame(height: 300)
-                    .onAppear{
-                        HttpUtility().getVideosData { (vids) in
-                            self.vids = vids
-                        }
+                        }.frame(height: 220)
+                        
+                        Spacer()
                     }
-                    Spacer()
+                }
+
+            }.onAppear{
+                if self.vids.count == 0 {
+                    HttpUtility().getVideosData { (vids) in
+                        self.vids = vids
+                        self.isLoading = false
+                    }
                 }
             }
         }

@@ -30,7 +30,7 @@ class HttpUtility {
                     }
                 }
                 catch let error {
-                    print("error")
+                    print("error",error)
                 }
             
         }.resume()

@@ -21,6 +21,7 @@
 		043FA85025A47A37002FA3AE /* VideosCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA84F25A47A37002FA3AE /* VideosCollection.swift */; };
 		043FA85225A47A7E002FA3AE /* HttpUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA85125A47A7E002FA3AE /* HttpUtility.swift */; };
 		043FA85425A4E1D7002FA3AE /* VideosRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043FA85325A4E1D7002FA3AE /* VideosRow.swift */; };
+		0449423B25B9AAFC00A06030 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0449423A25B9AAFC00A06030 /* Loader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		043FA84F25A47A37002FA3AE /* VideosCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosCollection.swift; sourceTree = "<group>"; };
 		043FA85125A47A7E002FA3AE /* HttpUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpUtility.swift; sourceTree = "<group>"; };
 		043FA85325A4E1D7002FA3AE /* VideosRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosRow.swift; sourceTree = "<group>"; };
+		0449423A25B9AAFC00A06030 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				043FA81F25A31923002FA3AE /* AppDelegate.swift */,
 				043FA82125A31923002FA3AE /* SceneDelegate.swift */,
 				043EAAC125A8A204007B14CE /* Home.swift */,
+				0449423A25B9AAFC00A06030 /* Loader.swift */,
 				043FA85325A4E1D7002FA3AE /* VideosRow.swift */,
 				043EAABD25A5EB6B007B14CE /* VideoItem.swift */,
 				043EAABF25A894B9007B14CE /* VideoTitle.swift */,
@@ -289,6 +292,7 @@
 				043EAABE25A5EB6B007B14CE /* VideoItem.swift in Sources */,
 				043EAAC425ACBD2F007B14CE /* VideoDetailedView.swift in Sources */,
 				043FA82025A31923002FA3AE /* AppDelegate.swift in Sources */,
+				0449423B25B9AAFC00A06030 /* Loader.swift in Sources */,
 				043FA82225A31923002FA3AE /* SceneDelegate.swift in Sources */,
 				043EAAC225A8A204007B14CE /* Home.swift in Sources */,
 				043EAAC025A894B9007B14CE /* VideoTitle.swift in Sources */,

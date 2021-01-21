@@ -16,10 +16,9 @@ struct VideoDetailedView: View {
     @State var vidPlayer: player
     
     var body: some View {
-        GeometryReader { metrics in
+        
             ScrollView(.vertical) {
                 VStack(alignment: .leading) {
-                    
                     self.vidPlayer.frame(height: UIScreen.main.bounds.height/2.5)
                     Text(self.vidItem.title).font(.title).bold().padding(.leading, 20)
                     Text(self.vidItem.subtitle.rawValue).padding(.leading,20)
@@ -28,9 +27,8 @@ struct VideoDetailedView: View {
 
                     Spacer()
                 }
-            }
-        }.navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: Button(action: {
+            }.navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: Button(action: {
             self.vidPlayer.stopPlayer()
             print("Button Tapped")
             self.presentationMode.wrappedValue.dismiss()

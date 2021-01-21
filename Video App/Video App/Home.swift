@@ -9,20 +9,20 @@
 import SwiftUI
 
 struct Home: View {
-    let titles = [VideoTitle(title: "Trending"),VideoTitle(title: "Popular"),VideoTitle(title: "Best Drama"),VideoTitle(title: "Popular"),VideoTitle(title: "Kids")]
+    let titles = [VideoTitle(title: "Trending"),VideoTitle(title: "Popular"),VideoTitle(title: "Best Drama"),VideoTitle(title: "New Arrival"),VideoTitle(title: "Kids")]
     
     var body: some View {
         NavigationView {
             ScrollView {
                 ForEach(self.titles) { videoTitle in
                     VStack(alignment: .leading) {
-                        VideosRow(categoryName: videoTitle.title).frame(height: 320)
+                        VideosRow(categoryName: videoTitle.title).frame(height: 250)
                             .padding(.top)
                             .padding(.bottom)
                             .padding(.leading,20)
                     }
                 }
-            }.navigationBarTitle("Videos")
+            }.navigationBarTitle(Text("Videos"), displayMode: .inline)
         }
     }
 }

@@ -12,21 +12,21 @@ struct VideoItem: View {
     
     @State var vid: Video
     var baseImageUrl = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/"
-    @State var vidImage: UIImage = UIImage(systemName: "bell")!
+    @State var vidImage: UIImage = UIImage(systemName: "photo.fill")!
     
     var body: some View {
         GeometryReader { metrics in
             
-            VStack(alignment: .leading, spacing: 16.0) {
+            VStack(alignment: .leading, spacing: 10.0) {
                 Image(uiImage: self.vidImage)
                     .resizable()
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: metrics.size.width * 0.99, height: 170)
+                    .frame(width: metrics.size.width * 0.99, height: 150)
                     .cornerRadius(10.0)
                     .shadow(radius: 10.0)
                 
-                VStack(alignment: .leading, spacing: 5.0) {
+                VStack(alignment: .leading, spacing: 2.0) {
                     Text(self.vid.title)
                         .foregroundColor(.primary)
                         .font(.headline)
@@ -34,8 +34,8 @@ struct VideoItem: View {
                         .font(.subheadline)
                         .foregroundColor(.secondary)
                         .multilineTextAlignment(.leading)
-                        .lineLimit(2)
-                        .frame(height: 40)
+                        .lineLimit(1)
+                        .frame(height: 20)
                 }
                 
             }.onAppear {
